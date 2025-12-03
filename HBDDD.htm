@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happyyyy birthdayyy 🎂</title>
+    <style>
+        body {
+            background-color: #d11f7a; /* وردي غامق */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            padding-top: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* قلب نابض */
+        .heart {
+            width: 120px;
+            height: 120px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-45deg);
+            animation: beat 1.2s infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            width: 120px;
+            height: 120px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart:before { top: -60px; left: 0; }
+        .heart:after { left: 60px; top: 0; }
+
+        @keyframes beat {
+            0% { transform: translateX(-50%) rotate(-45deg) scale(1); }
+            50% { transform: translateX(-50%) rotate(-45deg) scale(1.2); }
+            100% { transform: translateX(-50%) rotate(-45deg) scale(1); }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 180px;
+            backdrop-filter: blur(8px);
+            width: 80%;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            line-height: 1.8;
+        }
+
+        .arabic-text {
+            margin-top: 25px;
+            font-size: 26px;
+            color: #ffffff;
+        }
+
+        /* كيكة وشمعة */
+        .cake {
+            font-size: 60px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* قلوب صغيرة تتساقط */
+        .floating-heart {
+            position: absolute;
+            color: #ffffff;
+            font-size: 20px;
+            animation: floatHeart 6s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes floatHeart {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-600px) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- كيكة وشمعة -->
+    <div class="cake">🎂🕯️</div>
+
+    <!-- القلب الكبير -->
+    <div class="heart"></div>
+
+    <!-- معايدة -->
+    <div class="card">
+        <h1>Happy Birthday Bana</h1>
+        <p>
+            HBD Banaaa!  
+            Today is all about you, and I really hope you get to enjoy every bit of it.  
+            I hope this year brings you more peace, small moments that make you smile, and success in the things you care about.  
+            Stay yourself, stay happy, and keep doing what makes you feel good every single day.  
+            Talking with you always makes my days better, and I hope this year gives you a lot of moments that feel just as good.  
+            Take your time, enjoy the little things, and just have fun today — you deserve it.  
+            Happy birthday again, enjoy your day to the fullest, and remember that the best things are yet to come. 🤍
+        </p>
+        <p class="arabic-text">
+            كل عام وانتي بألف ألف خير يا روحي 😽
+        </p>
+    </div>
+
+    <!-- قلوب تتساقط -->
+    <div class="floating-heart" style="left: 10%;">❤️</div>
+    <div class="floating-heart" style="left: 30%; animation-delay: 1s;">❤️</div>
+    <div class="floating-heart" style="left: 50%; animation-delay: 2s;">❤️</div>
+    <div class="floating-heart" style="left: 70%; animation-delay: 0.5s;">❤️</div>
+    <div class="floating-heart" style="left: 90%; animation-delay: 1.5s;">❤️</div>
+
+</body>
+</html>
